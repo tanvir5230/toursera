@@ -33,7 +33,7 @@ const Explore = (props) => {
 const Search = () => {
   return (
     <div className="d-inline-block mr-4">
-      <input type="text" />
+      <input type="text" className="p-3" />
       <button className="btn btn-primary">
         <i className="fa fa-search"></i>
       </button>
