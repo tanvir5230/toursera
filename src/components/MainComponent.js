@@ -14,16 +14,16 @@ class Main extends Component {
       coursesInCart: [],
     };
   }
-  addCourseToCart = (name, price, id) => {
+  addCourseToCart = async (name, price, id) => {
     const courseNumber = this.state.totalCourse;
     const courseObj = { id, name, price };
     const newCourseArr = this.state.coursesInCart.concat(courseObj);
-    this.setState({
+    await this.setState({
       totalCourse: courseNumber + 1,
-      totalPrice: this.state.totalPrice + price,
       courseName: name,
       coursesInCart: newCourseArr,
     });
+    this.calculateTotalPrice();
   };
   emptyCart = () => {
     this.setState({
@@ -32,13 +32,24 @@ class Main extends Component {
       coursesInCart: [],
     });
   };
-  deleteCourse = (id) => {
+  deleteCourse = async (id) => {
     const filteredCourseArr = this.state.coursesInCart.filter((course) => {
       return !(course.id === id);
     });
-    console.log(filteredCourseArr);
-    this.setState({
+    await this.setState({
+      totalCourse: this.state.totalCourse - 1,
       coursesInCart: filteredCourseArr,
+    });
+    this.calculateTotalPrice();
+  };
+
+  calculateTotalPrice = () => {
+    const total = this.state.coursesInCart.reduce((acc, course) => {
+      return acc + course.price;
+    }, 0);
+    console.log(total, "total");
+    this.setState({
+      totalPrice: total,
     });
   };
 
