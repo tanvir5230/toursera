@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, ModalHeader, ModalBody, FormGroup, Badge } from "reactstrap";
+import SlidingMenu from "./SlidingMenu";
 
 const NavbarBrand = () => {
   return (
@@ -162,7 +163,12 @@ const Header = (props) => {
             )}
           </span>
         </div>
-
+        <SlidingMenu
+          isOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+          toggleLogin={toggleLogin}
+          toggleSignup={toggleSignup}
+        />
         <Login isOpen={isLoginOpen} toggleLogin={toggleLogin} />
         <Signup isOpen={isSignupOpen} toggleSignup={toggleSignup} />
       </div>
