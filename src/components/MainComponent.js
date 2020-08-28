@@ -11,21 +11,34 @@ class Main extends Component {
       totalCourse: 0,
       totalPrice: 0,
       courseName: "",
+      coursesInCart: [],
     };
-    console.log(this.state.totalPrice, this.state.totalCourse);
   }
-  addCourseToCart = (name, price) => {
+  addCourseToCart = (name, price, id) => {
     const courseNumber = this.state.totalCourse;
+    const courseObj = { id, name, price };
+    const newCourseArr = this.state.coursesInCart.concat(courseObj);
     this.setState({
       totalCourse: courseNumber + 1,
       totalPrice: this.state.totalPrice + price,
       courseName: name,
+      coursesInCart: newCourseArr,
     });
   };
   emptyCart = () => {
     this.setState({
       totalCourse: 0,
       totalPrice: 0,
+      coursesInCart: [],
+    });
+  };
+  deleteCourse = (id) => {
+    const filteredCourseArr = this.state.coursesInCart.filter((course) => {
+      return !(course.id === id);
+    });
+    console.log(filteredCourseArr);
+    this.setState({
+      coursesInCart: filteredCourseArr,
     });
   };
 
@@ -39,6 +52,8 @@ class Main extends Component {
           totalPrice={this.state.totalPrice}
           addCourseToCart={this.addCourseToCart}
           emptyCart={this.emptyCart}
+          coursesInCart={this.state.coursesInCart}
+          deleteCourse={this.deleteCourse}
         />
         <Footer />
       </div>
