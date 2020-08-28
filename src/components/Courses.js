@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardSubtitle, Badge } from "reactstrap";
+import { Card, CardBody, CardSubtitle } from "reactstrap";
 import { courses } from "../courseData";
 
 function Cart({ totalCourse, totalPrice, emptyCart }) {
@@ -41,7 +41,7 @@ class Courses extends Component {
     const RenderCourses = (props) => {
       return courses.map((course) => {
         return (
-          <div key={course.id} className="col-12 col-md-3 p-3">
+          <div key={course.id} className="col-12 col-md-4 p-3">
             <Card className="text-left">
               <img className="w-100" src={course.image} alt="html" />
               <CardBody>
