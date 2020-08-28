@@ -18,6 +18,8 @@ export const courses = [
     category: "front-end",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 2,
@@ -27,6 +29,8 @@ export const courses = [
     category: "front-end",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ export const courses = [
     author: "Tanvir Ibn Touhid",
     featured: true,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 4,
@@ -45,6 +51,8 @@ export const courses = [
     author: "Tanvir Ibn Touhid",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 5,
@@ -54,6 +62,8 @@ export const courses = [
     author: "Tanvir Ibn Touhid",
     featured: true,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 6,
@@ -63,6 +73,8 @@ export const courses = [
     author: "Tanvir Ibn Touhid",
     featured: true,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 7,
@@ -72,6 +84,8 @@ export const courses = [
     author: "Tanvir Ibn Touhid",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 8,
@@ -81,6 +95,8 @@ export const courses = [
     category: "others",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 9,
@@ -90,6 +106,8 @@ export const courses = [
     category: "back-end",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 10,
@@ -99,6 +117,8 @@ export const courses = [
     category: "others",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 11,
@@ -108,6 +128,8 @@ export const courses = [
     category: "others",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 12,
@@ -117,6 +139,8 @@ export const courses = [
     category: "others",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
   {
     id: 13,
@@ -126,5 +150,7 @@ export const courses = [
     category: "back-end",
     featured: false,
     image: "images/html.jpg",
+    rating: 4.5,
+    enrolled: 21171,
   },
 ];
